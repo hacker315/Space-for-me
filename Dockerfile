@@ -34,7 +34,6 @@ WORKDIR /app
 COPY --from=builder /app ./
 
 # 强制程序在 Koyeb 指定的 2345 端口运行
-ENV PORT=2345
 EXPOSE 2345
 
 # 最终启动命令
