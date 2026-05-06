@@ -34,6 +34,8 @@ WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/server.js ./server.js
+COPY --from=builder /app/masqr.js ./masqr.js
+COPY --from=builder /app/config.js ./config.js
 COPY --from=builder /app/public ./public
 # 关键：将构建好的 dist 文件夹也复制过来
 COPY --from=builder /app/dist ./dist
